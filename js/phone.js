@@ -41,18 +41,27 @@ const displayPhones = (phones, isShowAll) => {
     <div class="card-body">
       <h2 class="card-title">${phone.phone_name}</h2>
       <p>If a dog chews shoes whose shoes does he choose?</p>
-      <div class="card-actions justify-end">
-        <button class="btn btn-primary">Buy Now</button>
+      <div class="card-actions justify-center">
+        <button onclick="handleShowDetails()" class="btn btn-primary">Show Details</button>
       </div>
     </div>
     `;
     // 4. append child
     phoneContainer.appendChild(phoneCard);
   });
-
   //hide loading spinner
   toggleLoadingSpinner(false);
 };
+
+
+
+
+const handleShowDetails = () => {
+  console.log('clicked')
+}
+
+//5555555555 : upore ja
+
 
 // handle search button
 const handleSearch = (isShowAll) => {
