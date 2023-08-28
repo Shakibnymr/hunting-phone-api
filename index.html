@@ -15,7 +15,7 @@
     <header>
       <h2 class="text-6xl">Hunting Phone</h2>
     </header>
-    <main >
+    <main>
       <section class="p-4 m-4">
         <input
           type="text"
@@ -25,21 +25,42 @@
         />
         <button class="btn btn-accent" onclick="handleSearch()">Search</button>
       </section>
-      
+
       <!-- search result -->
       <section>
-<!-- spinner or loader -->
+        <!-- spinner or loader -->
         <div id="spinner" class="text-center my-32 hidden">
-          <span class="loading loading-spinner loading-lg "></span>
+          <span class="loading loading-spinner loading-lg"></span>
         </div>
         <div
           id="phone-container"
           class="mt-10 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10"
         ></div>
         <div id="show-all-container" class="hidden text-center mt-3">
-          <button class="btn btn-accent" onclick="handleShowAll()">Show All</button>
+          <button class="btn btn-accent" onclick="handleShowAll()">
+            Show All
+          </button>
         </div>
       </section>
+
+<!-- show details modal -->
+
+<!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+
+
+
+
     </main>
     <footer></footer>
     <script src="./js/phone.js"></script>
